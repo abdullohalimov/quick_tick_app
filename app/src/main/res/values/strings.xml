@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Quick Tick</string>
+    <string name="title_task_list">Vazifalar ro\'yxati</string>
+    <string name="title_config">Sozlamalar</string>
+    <string name="title_timer">Pomodoro</string>
+    <string name="add_task">Vazfia qo\'shish</string>
+    <string name="no_tasks_added_yet">Hali vazifa qo\'shilmadi!</string>
+    <string name="lb_title">Sarlavha</string>
+    <string name="text_input_1">Turi</string>
+    <string name="lbl_content">Batafsil izoh qoldiring</string>
+    <string name="lbl_category">Kategoriya</string>
+    <string name="err_msg_enter_title">Sarlavha kiriting</string>
+    <string name="err_msg_enter_category">Kategoriyani tanlang</string>
+    <string name="err_msg_enter_description">Izoh kiriting</string>
+    <string name="action_edit_task">Vazifani o\'zgartirish</string>
+    <string name="action_delete_task">Vazifani o\'chirish</string>
+
+    <string name="time_in_minutes">%1$s Daqiqa</string>
+    <string name="rounds_format">%1$s Aylana</string>
+
+    <string-array name="kategoriyalar">
+        <item>Shaxsiy ish</item>
+        <item>Uy ishlari</item>
+        <item>Munosabat</item>
+        <item>Xordiq</item>
+        <item>Yo\'l</item>
+        <item>Ish</item>
+        <item>Tanaffus</item>
+        <item>Internet</item>
+
+    </string-array>
+</resources>
