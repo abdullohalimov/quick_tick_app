@@ -13,7 +13,7 @@ interface TaskDAO {
     suspend fun insertTask(task: Task)
 
     @Query("SELECT * FROM TASK_TABLE ORDER BY ID")
-    fun getAllTasks(): Flow<List<Task>>
+    fun getAllTasks(): List<Task>
 
     @RawQuery
     fun getFocusTask(query: SupportSQLiteQuery) : List<Task>

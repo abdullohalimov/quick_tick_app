@@ -12,7 +12,7 @@ class TaskRepository(private val taskDao: TaskDAO) {
         taskDao.insertTask(task)
     }
 
-    val allTasksList: Flow<List<Task>> = taskDao.getAllTasks()
+    val allTasksList: List<Task> = taskDao.getAllTasks()
 
     fun getFocusedTask(title: String): List<Task> {
         val query = "SELECT * FROM TASK_TABLE WHERE title = $title"

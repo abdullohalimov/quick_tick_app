@@ -52,6 +52,7 @@ class TimerFragment : Fragment() {
             shpref.getString("timestamp", "").toString(),
             shpref.getString("category", "").toString(),
             shpref.getString("content", "Ma'lum bir vazifada diqqatingizni jamlash uchun uni fokusga qo'shing").toString(),
+            1L,
             shpref.getBoolean("primary", true),
             shpref.getInt("id", 0)))
         mTaskAdapter.tasksList(data)
@@ -76,6 +77,9 @@ class TimerFragment : Fragment() {
         mBinding!!.roundsText.text = "Aylana: ${current_rounds.toInt()}"
 
         playbutton.setOnClickListener {
+            val current_rounds2 = getRounds("current_rounds", rounds.toInt())
+            round_progressbar.progress = current_rounds2
+            mBinding!!.roundsText.text = "Aylana: ${current_rounds2.toInt()}"
             val newState =
                 if (playbutton.state === PLAY)
                     PAUSE else PLAY

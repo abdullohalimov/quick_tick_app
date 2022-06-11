@@ -6,6 +6,7 @@ import android.os.CountDownTimer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager
+import com.kl3jvi.pomodroid.databinding.FragmentTimerBinding
 import com.kl3jvi.pomodroid.view.activities.MainActivity
 
 class TimerViewModel(application: Application) : AndroidViewModel(application) {
@@ -14,6 +15,7 @@ class TimerViewModel(application: Application) : AndroidViewModel(application) {
     lateinit var timer: CountDownTimer
     var timerFinished = MutableLiveData<Boolean>()
     val currentTime = MutableLiveData<Long>()
+
 
 
     private fun setupTime(key: String): Long {
@@ -32,19 +34,23 @@ class TimerViewModel(application: Application) : AndroidViewModel(application) {
             override fun onFinish() {
                 val shpref = PreferenceManager.getDefaultSharedPreferences(getApplication())
                 val rounds = shpref.getInt("rounds", 0)
-                val cround = shpref.getInt("current_round", rounds)
-                if (rounds == cround){
+                val cround = shpref.getInt("current_rounds", rounds)
+                if (rounds == cround)
                     shpref.edit().putInt("current_rounds", rounds - 1).apply()
-                }else
+
+                if (cround != rounds)
                     shpref.edit().putInt("current_rounds", cround - 1).apply()
 
-                shpref.edit().remove("title").apply()
-                shpref.edit().remove("timestamp").apply()
-                shpref.edit().remove("category").apply()
-                shpref.edit().remove("content").apply()
-                shpref.edit().remove("primary").apply()
-                shpref.edit().remove("id").apply()
-                timerFinished.value = true
+                if (cround == 0){
+                    shpref.edit().remove("title").apply()
+                    shpref.edit().remove("timestamp").apply()
+                    shpref.edit().remove("category").apply()
+                    shpref.edit().remove("content").apply()
+                    shpref.edit().remove("primary").apply()
+                    shpref.edit().remove("id").apply()
+                    shpref.edit().remove("current_rounds").apply()
+                    timerFinished.value = true
+                }
             }
         }
     }

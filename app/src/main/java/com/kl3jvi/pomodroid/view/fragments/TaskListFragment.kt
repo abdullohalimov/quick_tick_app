@@ -43,20 +43,9 @@ class TaskListFragment : Fragment() {
         mTaskAdapter = TaskAdapter(this@TaskListFragment)
         mBinding.rvTaskList.adapter = mTaskAdapter
 
-        mTaskViewModel.allTaskList.observe(viewLifecycleOwner) { tasks ->
-            tasks.let {
-                for (task in it) {
-                    if (it.isNotEmpty()) {
-                        mBinding.noTaskTv.visibility = View.GONE
-                        mBinding.rvTaskList.visibility = View.VISIBLE
-                        mTaskAdapter.tasksList(it)
-                    } else {
-                        mBinding.noTaskTv.visibility = View.VISIBLE
-                        mBinding.rvTaskList.visibility = View.GONE
-                    }
-                }
-            }
-        }
+        val it = mTaskViewModel.allTaskList
+        mTaskAdapter.tasksList(it)
+
     }
 
     fun getRandomColor(): ColorStateList {

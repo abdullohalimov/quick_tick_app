@@ -49,6 +49,7 @@ class ConfigFragment : Fragment(), OnProgressChangedListener {
         progressFloat: Float,
         fromUser: Boolean
     ) {
+        val shpref = PreferenceManager.getDefaultSharedPreferences(requireContext())
         Log.e(R.id.seekBar1.toString(), bubbleSeekBar!!.id.toString())
         when (bubbleSeekBar.id) {
             R.id.seekBar1 -> {
@@ -70,6 +71,9 @@ class ConfigFragment : Fragment(), OnProgressChangedListener {
                 mBinding!!.time4.text =
                     resources.getString(R.string.rounds_format, progress.toString())
                 saveValue("rounds", progress)
+                shpref.edit().remove("current_rounds").apply()
+
+
             }
         }
 

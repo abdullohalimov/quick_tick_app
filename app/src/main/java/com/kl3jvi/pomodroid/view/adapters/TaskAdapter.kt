@@ -99,7 +99,7 @@ class TaskAdapter(private val fragment: Fragment) : RecyclerView.Adapter<TaskAda
                         }
 
                         3 -> {
-                            shpref.edit().putString("title", "").apply()
+                            shpref.edit().putString("title", "Fokusga vazifa qo'shilmagan!").apply()
                             shpref.edit().putString("timestamp", "").apply()
                             shpref.edit().putString("category", "").apply()
                             shpref.edit().putString("content", "Ma'lum bir vazifada diqqatingizni jamlash uchun uni fokusga qo'shing").apply()

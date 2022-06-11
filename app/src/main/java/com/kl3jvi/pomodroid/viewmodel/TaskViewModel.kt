@@ -10,7 +10,7 @@ class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
         repository.insertTask(task)
     }
 
-    val allTaskList: LiveData<List<Task>> = repository.allTasksList.asLiveData()
+    val allTaskList: List<Task> = repository.allTasksList
 
     fun getFocused(title: String){
         repository.getFocusedTask(title)

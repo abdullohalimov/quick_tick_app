@@ -89,7 +89,8 @@ class AddUpdateToDoList : AppCompatActivity(){
                         title,
                         timeToSave,
                         category,
-                        description
+                        description,
+                        Calendar.getInstance().timeInMillis
                     )
                     mTaskViewModel.insert(taskDetails)
                     Toast.makeText(

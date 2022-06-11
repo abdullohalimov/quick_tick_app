@@ -6,7 +6,9 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.475" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic_category.xml" value="0.20885416666666667" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_config.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.20885416666666667" />
@@ -17,20 +19,33 @@
         <entry key="app/src/main/res/drawable/ic_refresh.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/drawable/ic_task_list.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/drawable/ic_timer.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/red_dot.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/drawable/sample_icon2.xml" value="0.20885416666666667" />
+        <entry key="app/src/main/res/drawable/sample_three_icons.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/layout/activity_add_note.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_add_update_to_do_list.xml" value="0.31354166666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.31354166666666666" />
+        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_calendar2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_config.xml" value="0.31354166666666666" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.31354166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.31354166666666666" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.16354166666666667" />
         <entry key="app/src/main/res/layout/fragment_task_list.xml" value="0.16354166666666667" />
-        <entry key="app/src/main/res/layout/fragment_timer.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/item_task.xml" value="0.31354166666666666" />
+        <entry key="app/src/main/res/layout/fragment_timer.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_task.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_task2.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/note_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/play_pause_bg.xml" value="0.31354166666666666" />
+        <entry key="app/src/main/res/menu/add_note_menu.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/diary_add_item.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/menu/ic_close.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/menu_adapter.xml" value="0.31354166666666666" />
         <entry key="app/src/main/res/menu/menu_add_task.xml" value="0.31354166666666666" />
+        <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

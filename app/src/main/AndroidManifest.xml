@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pomodroid">
         <activity
+            android:name=".view.activities.CalendarActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.CalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activities.AddUpdateToDoList"
             android:exported="true" />
         <activity
@@ -22,6 +28,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.activities.MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".view.activities.AddEditNoteActivity"
+            android:exported="true"
+            android:parentActivityName=".view.activities.MainActivity2" />
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ data class Task(
     @ColumnInfo(name = "time_stamp") val timeStamp: String,
     @ColumnInfo val category: String,
     @ColumnInfo val content: String,
+    @ColumnInfo val date: Long,
     @ColumnInfo(name = "primary_task") var primaryTask: Boolean = false,
     @PrimaryKey(autoGenerate = true) val id: Int = 0
 ) : Parcelable

@@ -2,6 +2,9 @@ package com.kl3jvi.pomodroid.view.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -11,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kl3jvi.pomodroid.R
 import com.kl3jvi.pomodroid.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,5 +43,27 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item?.itemId) {
+            R.id.diary -> {
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Intent Started!", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> {
+                Toast.makeText(this, "Calendar button!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, CalendarActivity2::class.java)
+                startActivity(intent)
+                true
+            }
+        }
     }
 }
